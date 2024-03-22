@@ -1,0 +1,1 @@
+# Strategico.Calculadora
