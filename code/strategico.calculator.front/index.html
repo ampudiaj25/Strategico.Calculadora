@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Strategico Calculadora</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5 card card-body col-md-4">
+        <h1 class="mt-2">Calculadora Strategico</h1>
+        <form id="formValidation" name="formValidation" method="POST" action="#">
+            <div class="mb-3">
+                <label for="operand1" id="lblOperand1" class="form-label">Numero 1:</label>
+                <input type="number" name="operand1" id="operand1" class="form-control" />
+            </div>
+            <div class="mb-3 ">
+                <label for="operand2" id="lblOperand2" class="form-label">Numero 2:</label>
+                <input type="number" name="operand2" id="operand2" class="form-control" />
+            </div>
+            <div class="mb-3 ">
+                <label id="lblOperation" class="form-label">Operación:</label>
+                <select class="form-select" id="operation" name="operation">
+                    <option value="" disabled selected>Selecciona una operación...</option>
+                    <option value="addition">Sumar</option>
+                    <option value="subtraction">Restar</option>
+                    <option value="multiplication">Multiplicar</option>
+                    <option value="division">Dividir</option>
+                </select>
+            </div>
+            <div class="mb-3 ">
+                <button type="submit" class="btn btn-primary col-12">Calcular</button>
+            </div>
+        </form>
+        <div id="loadingSpinner" class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div id="respuesta" class="mt-3"></div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
